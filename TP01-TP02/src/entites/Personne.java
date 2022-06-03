@@ -1,9 +1,9 @@
 package entites;
 
 public class Personne {
-    String nom;
-    String prenom;
-    AdressePostale adresse;
+    private String nom;
+    private String prenom;
+    private AdressePostale adresse;
 
     public Personne(String nom, String prenom, AdressePostale adresse) {
         this.nom = nom;
