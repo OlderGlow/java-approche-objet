@@ -11,6 +11,14 @@ public class Personne {
         this.adresse = adresse;
     }
 
+    public Personne() {
+    }
+
+    public Personne(String nom, String prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
     public String getNom() {
         return nom;
     }
@@ -33,5 +41,10 @@ public class Personne {
 
     public void setAdresse(AdressePostale adresse) {
         this.adresse = adresse;
+    }
+
+    public void getInfo() {
+        System.out.println("Nom : " + this.getNom().toUpperCase());
+        System.out.println("Prénom : " + this.getPrenom());
     }
 }
