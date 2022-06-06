@@ -14,22 +14,23 @@ public class TestBanque {
        init();
     }
 
-    public static void init(){
+    public static void init() {
         Scanner sc = new Scanner(System.in);
+        int choix;
         do {
-          showMenu();
-            int choix = sc.nextInt();
+            showMenu();
+            choix = sc.nextInt();
             switch (choix) {
                 case 1 -> {
                     System.out.println("Liste des comptes :");
                     Compte[] comptes = compteDAOMem.lister();
-                   if(comptes.length == 0){
-                       System.err.println("Aucun compte n'a encore été enregistré");
-                   } else {
-                       for (Compte compte : comptes) {
-                           System.out.println(compte);
-                       }
-                   }
+                    if (comptes.length == 0) {
+                        System.err.println("Aucun compte n'a encore été enregistré");
+                    } else {
+                        for (Compte compte : comptes) {
+                            System.out.println(compte);
+                        }
+                    }
                 }
                 case 2 -> {
                     System.out.println("Saisir un numéro de compte :");
@@ -38,9 +39,9 @@ public class TestBanque {
                     double solde = sc.nextDouble();
                     System.out.println("Saisir le type de compte : (1: Normal, 2: Intérêts)");
                     int type = sc.nextInt();
-                    if(type == 1){
+                    if (type == 1) {
                         compteDAOMem.sauvegarder(new Compte(numero, solde));
-                    } else if(type == 2){
+                    } else if (type == 2) {
                         System.out.println("Saisir le taux d'intérêts :");
                         double taux = sc.nextDouble();
                         compteDAOMem.sauvegarder(new CompteTaux(numero, solde, taux));
@@ -60,11 +61,11 @@ public class TestBanque {
                     }
                     System.out.println("Saisir le type d'opération : (1: Créditer, 2: Débiter)");
                     int type = sc.nextInt();
-                    if(type == 1){
+                    if (type == 1) {
                         System.out.println("Saisir le montant à créditer :");
                         double montant = sc.nextDouble();
                         actualCompte.setSoldeCompte((float) (actualMontant + montant));
-                    } else if(type == 2){
+                    } else if (type == 2) {
                         System.out.println("Saisir le montant à débiter :");
                         double montant = sc.nextDouble();
                         actualCompte.setSoldeCompte((float) (actualMontant - montant));
@@ -86,13 +87,13 @@ public class TestBanque {
                 }
                 case 99 -> {
                     System.out.println("Au revoir !");
-                    break;
+                    sc.close();
                 }
                 default -> {
                     System.err.println("Choix incorrect");
                 }
             }
-        } while (true);
+        } while (choix != 99);
     }
 
     public static void showMenu(){
