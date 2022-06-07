@@ -11,13 +11,13 @@ import java.util.Scanner;
 public class TestBanque {
 
     static CompteDAOMem compteDAOMem = new CompteDAOMem();
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         init();
     }
 
     public static void init() {
-        Scanner sc = new Scanner(System.in);
         int choix;
         do {
             showMenu();
