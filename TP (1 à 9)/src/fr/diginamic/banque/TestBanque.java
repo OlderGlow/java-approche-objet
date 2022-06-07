@@ -27,15 +27,15 @@ public class TestBanque {
                     lister();
                 }
                 case 2 -> {
-                    creerCompte(sc);
+                    creerCompte();
                 }
                 case 3 -> {
                     lister();
-                    ajouterOperation(sc);
+                    ajouterOperation();
                 }
                 case 4 -> {
                     lister();
-                    supprimerCompte(sc);
+                    supprimerCompte();
                 }
                 case 99 -> {
                     System.out.println("Au revoir !");
@@ -70,7 +70,7 @@ public class TestBanque {
         }
     }
 
-    private static void creerCompte(Scanner sc) {
+    private static void creerCompte() {
         System.out.println("Saisir un numéro de compte :");
         int numero = sc.nextInt();
         System.out.println("Saisir le solde initial :");
@@ -88,7 +88,7 @@ public class TestBanque {
         }
     }
 
-    private static void supprimerCompte(Scanner sc) {
+    private static void supprimerCompte() {
         System.out.println("Saisir un numéro de compte :");
         sc.nextLine();
         String numeroCompte = sc.nextLine();
@@ -103,7 +103,7 @@ public class TestBanque {
         }
     }
 
-    private static void ajouterOperation(Scanner sc) {
+    private static void ajouterOperation() {
         System.out.println("Saisir un numéro de compte :");
         sc.nextLine();
         String numeroCompte = sc.nextLine();
@@ -116,15 +116,15 @@ public class TestBanque {
         int type = sc.nextInt();
         sc.nextLine();
         if (type == 1) {
-            addCredit(sc, actualCompte, actualMontant);
+            addCredit(actualCompte, actualMontant);
         } else if (type == 2) {
-            addDebit(sc, actualCompte, actualMontant);
+            addDebit(actualCompte, actualMontant);
         } else {
             System.err.println("Type d'opération inconnu");
         }
     }
 
-    private static void addCredit(Scanner sc, Compte actualCompte, double actualMontant) {
+    private static void addCredit(Compte actualCompte, double actualMontant) {
         System.out.println("Saisir la date de l'opération :");
         String date = sc.nextLine();
         System.out.println("Saisir le montant à créditer :");
@@ -135,7 +135,7 @@ public class TestBanque {
         actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
     }
 
-    private static void addDebit(Scanner sc, Compte actualCompte, double actualMontant) {
+    private static void addDebit(Compte actualCompte, double actualMontant) {
         System.out.println("Saisir la date de l'opération :");
         String date = sc.nextLine();
         System.out.println("Saisir le montant à débiter :");
