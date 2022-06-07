@@ -48,7 +48,7 @@ public class TestBanque {
         } while (choix != 99);
     }
 
-    public static void showMenu() {
+    private static void showMenu() {
         System.out.println("***** Administration des comptes *****");
         System.out.println("1. Lister les comptes");
         System.out.println("2. Ajouter un nouveau compte");
@@ -58,7 +58,7 @@ public class TestBanque {
         System.out.println("Votre choix :");
     }
 
-    public static void lister() {
+    private static void lister() {
         System.out.println("Liste des comptes :");
         Compte[] comptes = compteDAOMem.lister();
         if (comptes.length == 0) {
@@ -70,7 +70,7 @@ public class TestBanque {
         }
     }
 
-    public static void creerCompte(Scanner sc) {
+    private static void creerCompte(Scanner sc) {
         System.out.println("Saisir un numéro de compte :");
         int numero = sc.nextInt();
         System.out.println("Saisir le solde initial :");
@@ -88,7 +88,7 @@ public class TestBanque {
         }
     }
 
-    public static void supprimerCompte(Scanner sc) {
+    private static void supprimerCompte(Scanner sc) {
         System.out.println("Saisir un numéro de compte :");
         sc.nextLine();
         String numeroCompte = sc.nextLine();
@@ -103,7 +103,7 @@ public class TestBanque {
         }
     }
 
-    public static void ajouterOperation(Scanner sc) {
+    private static void ajouterOperation(Scanner sc) {
         System.out.println("Saisir un numéro de compte :");
         sc.nextLine();
         String numeroCompte = sc.nextLine();
@@ -124,7 +124,7 @@ public class TestBanque {
         }
     }
 
-    public static void addCredit(Scanner sc, Compte actualCompte, double actualMontant) {
+    private static void addCredit(Scanner sc, Compte actualCompte, double actualMontant) {
         System.out.println("Saisir la date de l'opération :");
         String date = sc.nextLine();
         System.out.println("Saisir le montant à créditer :");
@@ -135,7 +135,7 @@ public class TestBanque {
         actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
     }
 
-    public static void addDebit(Scanner sc, Compte actualCompte, double actualMontant) {
+    private static void addDebit(Scanner sc, Compte actualCompte, double actualMontant) {
         System.out.println("Saisir la date de l'opération :");
         String date = sc.nextLine();
         System.out.println("Saisir le montant à débiter :");
