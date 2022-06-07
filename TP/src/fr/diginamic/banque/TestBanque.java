@@ -56,7 +56,7 @@ public class TestBanque {
                     System.out.println("Saisir un numéro de compte :");
                     sc.nextLine();
                     String numeroCompte = sc.nextLine();
-                    if (compteDAOMem.existe(numeroCompte)) {
+                    if (!compteDAOMem.existe(numeroCompte)) {
                         System.err.println("Compte introuvable");
                         break;
                     }
@@ -66,6 +66,7 @@ public class TestBanque {
                     System.out.println("Saisir le type d'opération : (1: Créditer, 2: Débiter)");
                     int type = sc.nextInt();
                     if (type == 1) {
+                        sc.nextLine();
                         System.out.println("Saisir la date de l'opération :");
                         String date = sc.nextLine();
                         System.out.println("Saisir le montant à créditer :");
@@ -73,6 +74,7 @@ public class TestBanque {
                         Credit credit = new Credit(date, montant);
                         actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
                     } else if (type == 2) {
+                        sc.nextLine();
                         System.out.println("Saisir la date de l'opération :");
                         String date = sc.nextLine();
                         System.out.println("Saisir le montant à débiter :");
