@@ -95,8 +95,12 @@ public class TestBanque {
         if (!compteDAOMem.existe(numeroCompte)) {
             System.err.println("Compte introuvable");
         }
-        compteDAOMem.supprimer(numeroCompte);
-        System.out.println("Le compte a été supprimé");
+        boolean compteDelete = compteDAOMem.supprimer(numeroCompte);
+        if(compteDelete) {
+            System.out.println("Compte supprimé !");
+        } else {
+            System.err.println("Erreur lors de la suppression du compte");
+        }
     }
 
     public static void ajouterOperation(Scanner sc) {
