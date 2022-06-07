@@ -3,12 +3,15 @@ package fr.diginamic.banque;
 import fr.diginamic.banque.dao.CompteDAOMem;
 import fr.diginamic.banque.entites.Compte;
 import fr.diginamic.banque.entites.CompteTaux;
+import fr.diginamic.banque.entites.Credit;
+import fr.diginamic.banque.entites.Debit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class TestBanque {
+
     static CompteDAOMem compteDAOMem = new CompteDAOMem();
     public static void main(String[] args) {
        init();
@@ -53,22 +56,29 @@ public class TestBanque {
                     System.out.println("Saisir un numéro de compte :");
                     sc.nextLine();
                     String numeroCompte = sc.nextLine();
-                    Compte actualCompte = compteDAOMem.getCompte(numeroCompte);
-                    double actualMontant = actualCompte.getSoldeCompte();
-                    if (actualCompte == null) {
+                    if (compteDAOMem.existe(numeroCompte)) {
                         System.err.println("Compte introuvable");
                         break;
                     }
+                    Compte actualCompte = compteDAOMem.getCompte(numeroCompte);
+                    double actualMontant = actualCompte.getSoldeCompte();
+
                     System.out.println("Saisir le type d'opération : (1: Créditer, 2: Débiter)");
                     int type = sc.nextInt();
                     if (type == 1) {
+                        System.out.println("Saisir la date de l'opération :");
+                        String date = sc.nextLine();
                         System.out.println("Saisir le montant à créditer :");
                         double montant = sc.nextDouble();
-                        actualCompte.setSoldeCompte((float) (actualMontant + montant));
+                        Credit credit = new Credit(date, montant);
+                        actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
                     } else if (type == 2) {
+                        System.out.println("Saisir la date de l'opération :");
+                        String date = sc.nextLine();
                         System.out.println("Saisir le montant à débiter :");
                         double montant = sc.nextDouble();
-                        actualCompte.setSoldeCompte((float) (actualMontant - montant));
+                        Debit debit = new Debit(date, montant);
+                        actualCompte.setSoldeCompte((float) (actualMontant - debit.getMontant()));
                     } else {
                         System.err.println("Type d'opération inconnu");
                     }
@@ -77,8 +87,7 @@ public class TestBanque {
                     System.out.println("Saisir un numéro de compte :");
                     sc.nextLine();
                     String numeroCompte = sc.nextLine();
-                    Compte actualCompte = compteDAOMem.getCompte(numeroCompte);
-                    if (actualCompte == null) {
+                    if (!compteDAOMem.existe(numeroCompte)) {
                         System.err.println("Compte introuvable");
                         break;
                     }

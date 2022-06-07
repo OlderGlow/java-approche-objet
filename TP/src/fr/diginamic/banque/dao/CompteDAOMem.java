@@ -3,25 +3,30 @@ package fr.diginamic.banque.dao;
 import fr.diginamic.banque.entites.Compte;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CompteDAOMem implements CompteDAO {
-    ArrayList<Compte> listeComptes = new ArrayList<>();
+    Compte[] comptes = new Compte[0];
 
     @Override
     public Compte[] lister() {
-        return listeComptes.toArray(new Compte[0]);
+        return comptes;
     }
 
     @Override
     public void sauvegarder(Compte nvCompte) {
-        listeComptes.add(nvCompte);
+        ArrayList<Compte> liste = new ArrayList<>(Arrays.asList(comptes));
+        liste.add(nvCompte);
+        comptes = liste.toArray(new Compte[0]);
     }
 
     @Override
     public boolean supprimer(String numero) {
-        for (Compte compte : listeComptes) {
-            if (Integer.parseInt(numero) == compte.getNumeroCompte()) {
-                listeComptes.remove(compte);
+        ArrayList<Compte> liste = new ArrayList<>(Arrays.asList(comptes));
+        for (int i = 0; i < liste.size(); i++) {
+            if (liste.get(i).getNumeroCompte() == Integer.parseInt(numero)) {
+                liste.remove(i);
+                comptes = liste.toArray(new Compte[0]);
                 return true;
             }
         }
@@ -30,8 +35,8 @@ public class CompteDAOMem implements CompteDAO {
 
     @Override
     public boolean existe(String numero) {
-        for (Compte compte : listeComptes) {
-            if (Integer.parseInt(numero) == compte.getNumeroCompte()) {
+        for (Compte compte : comptes) {
+            if (compte.getNumeroCompte() == Integer.parseInt(numero)) {
                 return true;
             }
         }
@@ -40,8 +45,8 @@ public class CompteDAOMem implements CompteDAO {
 
     @Override
     public Compte getCompte(String numero) {
-        for (Compte compte : listeComptes) {
-            if (Integer.parseInt(numero) == compte.getNumeroCompte()) {
+        for (Compte compte : comptes) {
+            if (compte.getNumeroCompte() == Integer.parseInt(numero)) {
                 return compte;
             }
         }
