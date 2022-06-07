@@ -1,3 +1,4 @@
+package fr.diginamic.gestionsalaire.ihm;
 import fr.diginamic.gestionsalaire.entite.*;
 
 public class SalaireIHM {
