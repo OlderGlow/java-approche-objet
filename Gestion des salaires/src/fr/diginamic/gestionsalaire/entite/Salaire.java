@@ -27,12 +27,11 @@ public abstract class Salaire {
         this.salaireBrut = salaireBrut;
     }
 
-    public double calculerSalaireNet() {
-         this.setSalaireNet(salaireBrut * (1-TAUX_SALAIRE_BASE)/12);
-         return this.getSalaireNet();
+    public void calculerSalaireNet() {
+         this.setSalaireNet(this.getSalaireBrut() * (1-TAUX_SALAIRE_BASE)/12);
     }
 
-    protected abstract double calculerSalaireBrut();
+    protected abstract void calculerSalaireBrut();
 
     @Override
     public String toString() {

@@ -18,8 +18,7 @@ public class Commercial extends Salaire{
     }
 
     @Override
-    public double calculerSalaireBrut() {
+    public void calculerSalaireBrut() {
         this.setSalaireBrut(this.getChiffreAffaire() * 0.05);
-        return this.getChiffreAffaire() * 0.05;
     }
 }

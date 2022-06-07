@@ -5,21 +5,21 @@ public class SalaireIHM {
     public static void main(String[] args) {
         Adresse adresse = new Adresse("2","rue de la paix", "75000", "Paris");
         Contact contact = new Contact("0650287234", "dem@gmail.com");
-        Employe arthur = new Employe("PINHEIRO", "Adrien", "1972515217212", adresse, contact,"S871212", Metier.TECHNICIEN);
+        Employe arthur = new Employe("PINHEIRO", "Adrien", "1972515217212", adresse, contact,"S871212", Metier.COMMERCIAL);
         if(arthur.getMetier() == Metier.CADRE) {
             Cadre cadre = new Cadre(250);
-            double salaireBrut = cadre.calculerSalaireBrut();
-            double salaireNet = cadre.calculerSalaireNet();
+            cadre.calculerSalaireBrut();
+            cadre.calculerSalaireNet();
             arthur.setSalaire(cadre);
         } else if(arthur.getMetier() == Metier.COMMERCIAL) {
             Commercial commercial = new Commercial(5000000);
-            double salaireBrut = commercial.calculerSalaireBrut();
-            double salaireNet = commercial.calculerSalaireNet();
+            commercial.calculerSalaireBrut();
+            commercial.calculerSalaireNet();
             arthur.setSalaire(commercial);
         } else if (arthur.getMetier() == Metier.TECHNICIEN) {
             Technicien technicien = new Technicien(100, 10);
-            double salaireBrut = technicien.calculerSalaireBrut();
-            double salaireNet = technicien.calculerSalaireNet();
+            technicien.calculerSalaireBrut();
+            technicien.calculerSalaireNet();
             arthur.setSalaire(technicien);
         }
         System.out.println("Employé : " + arthur.getNom().toUpperCase() + " " + arthur.getPrenom());

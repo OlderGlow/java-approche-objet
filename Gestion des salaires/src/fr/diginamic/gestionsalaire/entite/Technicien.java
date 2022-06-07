@@ -27,8 +27,7 @@ public class Technicien extends Salaire {
     }
 
     @Override
-    public double calculerSalaireBrut() {
+    public void calculerSalaireBrut() {
         this.setSalaireBrut(this.getHeuresTravailles() * this.getTauxHoraire());
-        return this.heuresTravailles * this.tauxHoraire;
     }
 }

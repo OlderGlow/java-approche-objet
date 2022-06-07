@@ -18,8 +18,7 @@ public class Cadre extends Salaire {
     }
 
     @Override
-    public double calculerSalaireBrut() {
+    public void calculerSalaireBrut() {
         this.setSalaireBrut(nbJoursTravailles * this.tauxJournalier);
-        return nbJoursTravailles * this.getTauxJournalier();
     }
 }
