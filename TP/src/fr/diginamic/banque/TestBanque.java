@@ -1,14 +1,17 @@
 package fr.diginamic.banque;
 
 import fr.diginamic.banque.dao.CompteDAOMem;
-import fr.diginamic.banque.entites.*;
+import fr.diginamic.banque.entites.Compte;
+import fr.diginamic.banque.entites.CompteTaux;
+import fr.diginamic.banque.entites.Credit;
+import fr.diginamic.banque.entites.Debit;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestBanque {
 
     static CompteDAOMem compteDAOMem = new CompteDAOMem();
+
     public static void main(String[] args) {
         init();
     }
@@ -93,7 +96,7 @@ public class TestBanque {
             System.err.println("Compte introuvable");
         }
         boolean compteDelete = compteDAOMem.supprimer(numeroCompte);
-        if(compteDelete) {
+        if (compteDelete) {
             System.out.println("Compte supprimé !");
         } else {
             System.err.println("Erreur lors de la suppression du compte");
@@ -109,31 +112,37 @@ public class TestBanque {
         }
         Compte actualCompte = compteDAOMem.getCompte(numeroCompte);
         double actualMontant = actualCompte.getSoldeCompte();
-
         System.out.println("Saisir le type d'opération : (1: Créditer, 2: Débiter)");
         int type = sc.nextInt();
+        sc.nextLine();
         if (type == 1) {
-            sc.nextLine();
-            System.out.println("Saisir la date de l'opération :");
-            String date = sc.nextLine();
-            System.out.println("Saisir le montant à créditer :");
-            double montant = sc.nextDouble();
-            Credit credit = new Credit(date, montant);
-            int operations = actualCompte.getOperations();
-            actualCompte.setOperations(++operations);
-            actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
+            addCredit(sc, actualCompte, actualMontant);
         } else if (type == 2) {
-            sc.nextLine();
-            System.out.println("Saisir la date de l'opération :");
-            String date = sc.nextLine();
-            System.out.println("Saisir le montant à débiter :");
-            double montant = sc.nextDouble();
-            Debit debit = new Debit(date, montant);
-            int operations = actualCompte.getOperations();
-            actualCompte.setOperations(++operations);
-            actualCompte.setSoldeCompte((float) (actualMontant - debit.getMontant()));
+            addDebit(sc, actualCompte, actualMontant);
         } else {
             System.err.println("Type d'opération inconnu");
         }
+    }
+
+    public static void addCredit(Scanner sc, Compte actualCompte, double actualMontant) {
+        System.out.println("Saisir la date de l'opération :");
+        String date = sc.nextLine();
+        System.out.println("Saisir le montant à créditer :");
+        double montant = sc.nextDouble();
+        Credit credit = new Credit(date, montant);
+        int operations = actualCompte.getOperations();
+        actualCompte.setOperations(++operations);
+        actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
+    }
+
+    public static void addDebit(Scanner sc, Compte actualCompte, double actualMontant) {
+        System.out.println("Saisir la date de l'opération :");
+        String date = sc.nextLine();
+        System.out.println("Saisir le montant à débiter :");
+        double montant = sc.nextDouble();
+        Debit debit = new Debit(date, montant);
+        int operations = actualCompte.getOperations();
+        actualCompte.setOperations(++operations);
+        actualCompte.setSoldeCompte((float) (actualMontant - debit.getMontant()));
     }
 }
