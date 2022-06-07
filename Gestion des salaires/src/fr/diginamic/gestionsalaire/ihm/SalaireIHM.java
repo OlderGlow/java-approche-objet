@@ -29,5 +29,6 @@ public class SalaireIHM {
         System.out.println("Numéro de sécurité sociale : " + arthur.getNumSecuriteSociale());
         System.out.println("Adresse : " + arthur.getAdresse().getNumeroRue() + " " + arthur.getAdresse().getRue() + " " + arthur.getAdresse().getCodePostal() + " " + arthur.getAdresse().getVille());
         System.out.println("Contact : " + arthur.getContact().getNumeroTelephone() + " - " + arthur.getContact().getEmail());
+        System.out.println("Missions : " + arthur.gererProjet() + arthur.fabriquer() + " " + arthur.controler()  + arthur.trouverContact());
     }
 }

@@ -1,6 +1,6 @@
 package fr.diginamic.gestionsalaire.entite;
 
-public class Personne {
+public abstract class Personne {
     private String nom;
     private String prenom;
     private String numSecuriteSociale;

@@ -1,6 +1,8 @@
 package fr.diginamic.gestionsalaire.entite;
 
-public class Employe extends Personne {
+import fr.diginamic.gestionsalaire.dao.MetierDAO;
+
+public class Employe extends Personne implements MetierDAO {
 
     private String matricule;
     private Metier metier;
@@ -38,9 +40,43 @@ public class Employe extends Personne {
 
     @Override
     public String toString() {
-        return  super.toString() + "Employe{" +
+        return "Employe{" +
                 "matricule='" + matricule + '\'' +
                 ", metier=" + metier +
+                ", salaire=" + salaire +
                 '}';
     }
+
+    @Override
+    public String gererProjet() {
+        if(this.getMetier().equals(Metier.CADRE)){
+            return "Gérer les projets";
+        }
+        return "";
+    }
+
+    @Override
+    public String fabriquer() {
+        if(this.getMetier().equals(Metier.TECHNICIEN)){
+            return "Fabriquer des produits";
+        }
+        return "";
+    }
+
+    @Override
+    public String controler() {
+        if(this.getMetier().equals(Metier.TECHNICIEN)){
+            return "Contrôler les produits";
+        }
+        return "";
+    }
+
+    @Override
+    public String trouverContact() {
+        if(this.getMetier().equals(Metier.COMMERCIAL)){
+            return "Trouver de nouveaux contacts";
+        }
+        return "";
+    }
+
 }
