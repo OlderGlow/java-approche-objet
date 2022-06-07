@@ -1,16 +1,15 @@
 package fr.diginamic.banque;
 
 import fr.diginamic.banque.dao.CompteDAOMem;
-import fr.diginamic.banque.entites.Compte;
-import fr.diginamic.banque.entites.CompteTaux;
-import fr.diginamic.banque.entites.Credit;
-import fr.diginamic.banque.entites.Debit;
+import fr.diginamic.banque.entites.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestBanque {
 
     static CompteDAOMem compteDAOMem = new CompteDAOMem();
+    static ArrayList<Operation> operationsList = new ArrayList<>();
 
     public static void main(String[] args) {
         init();
@@ -122,7 +121,9 @@ public class TestBanque {
             System.out.println("Saisir le montant à créditer :");
             double montant = sc.nextDouble();
             Credit credit = new Credit(date, montant);
+            operationsList.add(credit);
             actualCompte.setSoldeCompte((float) (actualMontant + credit.getMontant()));
+            actualCompte.setOperations(operationsList.toArray(new Operation[0]));
         } else if (type == 2) {
             sc.nextLine();
             System.out.println("Saisir la date de l'opération :");
@@ -130,7 +131,9 @@ public class TestBanque {
             System.out.println("Saisir le montant à débiter :");
             double montant = sc.nextDouble();
             Debit debit = new Debit(date, montant);
+            operationsList.add(debit);
             actualCompte.setSoldeCompte((float) (actualMontant - debit.getMontant()));
+            actualCompte.setOperations(operationsList.toArray(new Operation[0]));
         } else {
             System.err.println("Type d'opération inconnu");
         }
