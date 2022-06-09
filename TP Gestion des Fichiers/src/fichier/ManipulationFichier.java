@@ -32,7 +32,7 @@ public class ManipulationFichier {
             String codeDepartement = colonnes[2];
             String populationTotale = colonnes[9];
             // Si la population totale est > 25000 alors afficher la ligne ne comprenant que les colonnes nom, code département et population totale
-            if (Integer.parseInt(populationTotale.replaceAll(" ", "")) > 25000) {
+            if (Integer.parseInt(populationTotale.trim().replaceAll(" ", "")) > 25000) {
                 Files.write(newPath, (nom + ";" + codeDepartement + ";" + populationTotale + "\n").getBytes(), StandardOpenOption.APPEND);
             }
         }
