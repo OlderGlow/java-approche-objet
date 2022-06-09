@@ -1,0 +1,366 @@
+Code département;Nom de la commune;Population totale
+Bourg-en-Bresse;01;43 454
+Laon;02;26 031
+Saint-Quentin;02;55 940
+Soissons;02;29 417
+Montluçon;03;37 417
+Gap;05;42 567
+Antibes;06;74 982
+Cagnes-sur-Mer;06;50 385
+Cannes;06;75 046
+Le Cannet;06;42 056
+Grasse;06;51 705
+Menton;06;28 942
+Nice;06;345 998
+Saint-Laurent-du-Var;06;28 831
+Vallauris;06;26 787
+Charleville-Mézières;08;48 420
+Troyes;10;61 988
+Carcassonne;11;47 418
+Narbonne;11;55 001
+Rodez;12;25 747
+Aix-en-Provence;13;146 385
+Arles;13;53 807
+Aubagne;13;45 711
+La Ciotat;13;35 758
+Istres;13;44 248
+Marignane;13;33 949
+Marseille;13;870 018
+Martigues;13;49 310
+Miramas;13;26 217
+Salon-de-Provence;13;46 225
+Vitrolles;13;34 301
+Caen;14;108 461
+Aurillac;15;27 659
+Angoulême;16;44 629
+La Rochelle;17;78 623
+Saintes;17;26 890
+Bourges;18;67 841
+Vierzon;18;27 036
+Brive-la-Gaillarde;19;48 333
+Ajaccio;2A;70 063
+Bastia;2B;45 596
+Dijon;21;159 031
+Saint-Brieuc;22;47 058
+Bergerac;24;28 166
+Périgueux;24;31 505
+Besançon;25;120 107
+Montbéliard;25;26 015
+Montélimar;26;39 924
+Romans-sur-Isère;26;34 095
+Valence;26;64 322
+Évreux;27;51 560
+Chartres;28;40 195
+Dreux;28;31 575
+Brest;29;142 629
+Quimper;29;66 743
+Alès;30;41 129
+Nîmes;30;154 196
+Colomiers;31;39 200
+Muret;31;25 961
+Toulouse;31;482 738
+Tournefeuille;31;27 008
+Bègles;33;28 092
+Bordeaux;33;256 045
+Gradignan;33;26 029
+Libourne;33;25 491
+Mérignac;33;71 203
+Pessac;33;62 737
+Saint-Médard-en-Jalles;33;31 576
+Talence;33;44 040
+La Teste-de-Buch;33;26 525
+Villenave-d'Ornon;33;33 091
+Agde;34;28 120
+Béziers;34;77 894
+Lunel;34;26 263
+Montpellier;34;286 098
+Sète;34;44 271
+Rennes;35;222 104
+Saint-Malo;35;47 528
+Châteauroux;36;45 780
+Joué-lès-Tours;37;37 974
+Tours;37;139 963
+Bourgoin-Jallieu;38;28 399
+Échirolles;38;36 143
+Grenoble;38;160 836
+Saint-Martin-d'Hères;38;38 974
+Vienne;38;30 178
+Mont-de-Marsan;40;31 517
+Blois;41;47 524
+Roanne;42;35 913
+Saint-Chamond;42;35 969
+Saint-Étienne;42;174 298
+Nantes;44;314 611
+Orvault;44;26 618
+Rezé;44;41 808
+Saint-Herblain;44;47 502
+Saint-Nazaire;44;72 295
+Saint-Sébastien-sur-Loire;44;27 591
+Orléans;45;118 102
+Agen;47;34 565
+Angers;49;155 543
+Cholet;49;55 772
+Saumur;49;28 554
+Sèvremoine;49;26 239
+Cherbourg-en-Cotentin;50;82 578
+Châlons-en-Champagne;51;46 288
+Reims;51;187 074
+Saint-Dizier;52;25 666
+Laval;53;52 359
+Nancy;54;106 953
+Vandœuvre-lès-Nancy;54;30 502
+Lorient;56;58 789
+Vannes;56;55 573
+Metz;57;119 856
+Thionville;57;41 396
+Nevers;58;34 799
+Armentières;59;25 373
+Cambrai;59;33 349
+Douai;59;40 860
+Dunkerque;59;89 485
+Lambersart;59;28 027
+Lille;59;236 782
+Marcq-en-Barœul;59;39 697
+Maubeuge;59;29 995
+Roubaix;59;96 953
+Tourcoing;59;98 170
+Valenciennes;59;44 509
+Villeneuve-d'Ascq;59;63 085
+Wattrelos;59;41 570
+Beauvais;60;57 548
+Compiègne;60;41 660
+Creil;60;36 091
+Alençon;61;27 221
+Arras;62;41 973
+Béthune;62;25 753
+Boulogne-sur-Mer;62;42 293
+Calais;62;75 719
+Hénin-Beaumont;62;26 260
+Lens;62;31 080
+Liévin;62;31 337
+Clermont-Ferrand;63;146 112
+Anglet;64;39 995
+Bayonne;64;51 943
+Biarritz;64;25 518
+Pau;64;79 022
+Tarbes;65;41 862
+Perpignan;66;123 602
+Haguenau;67;35 024
+Illkirch-Graffenstaden;67;27 505
+Schiltigheim;67;32 024
+Strasbourg;67;283 515
+Colmar;68;71 445
+Mulhouse;68;110 468
+Bron;69;41 589
+Caluire-et-Cuire;69;43 546
+Décines-Charpieu;69;28 249
+Lyon 1er Arrondissement;69;30 423
+Lyon 2e Arrondissement;69;30 857
+Lyon 3e Arrondissement;69;103 506
+Lyon 4e Arrondissement;69;36 524
+Lyon 5e Arrondissement;69;49 998
+Lyon 6e Arrondissement;69;52 282
+Lyon 7e Arrondissement;69;82 651
+Lyon 8e Arrondissement;69;85 610
+Lyon 9e Arrondissement;69;51 313
+Meyzieu;69;33 351
+Oullins;69;26 838
+Rillieux-la-Pape;69;30 275
+Saint-Priest;69;46 153
+Vaulx-en-Velin;69;48 906
+Vénissieux;69;65 822
+Villefranche-sur-Saône;69;37 783
+Villeurbanne;69;150 375
+Chalon-sur-Saône;71;47 085
+Mâcon;71;34 448
+Le Mans;72;146 804
+Aix-les-Bains;73;30 377
+Chambéry;73;60 872
+Annecy;74;130 257
+Annemasse;74;35 461
+Thonon-les-Bains;74;36 296
+Paris;75;2 210 875
+Dieppe;76;30 588
+Le Grand-Quevilly;76;26 175
+Le Havre;76;172 769
+Rouen;76;112 596
+Saint-Étienne-du-Rouvray;76;29 180
+Sotteville-lès-Rouen;76;29 766
+Bussy-Saint-Georges;77;27 299
+Chelles;77;54 682
+Meaux;77;56 249
+Melun;77;41 183
+Pontault-Combault;77;38 587
+Savigny-le-Temple;77;30 352
+Villeparisis;77;26 507
+Chatou;78;31 653
+Le Chesnay;78;28 558
+Conflans-Sainte-Honorine;78;36 058
+Élancourt;78;25 829
+Guyancourt;78;28 839
+Houilles;78;32 064
+Mantes-la-Jolie;78;44 231
+Montigny-le-Bretonneux;78;33 535
+Les Mureaux;78;32 777
+Plaisir;78;32 128
+Poissy;78;37 524
+Rambouillet;78;26 781
+Saint-Germain-en-Laye;78;41 749
+Sartrouville;78;53 237
+Trappes;78;32 931
+Versailles;78;87 315
+Niort;79;61 044
+Amiens;80;136 998
+Albi;81;51 151
+Castres;81;42 923
+Montauban;82;61 978
+Draguignan;83;40 928
+Fréjus;83;54 023
+La Garde;83;25 645
+Hyères;83;56 799
+Saint-Raphaël;83;35 826
+La Seyne-sur-Mer;83;65 386
+Six-Fours-les-Plages;83;33 904
+Toulon;83;171 643
+Avignon;84;94 200
+Carpentras;84;29 498
+Cavaillon;84;26 985
+Orange;84;29 856
+La Roche-sur-Yon;85;56 991
+Châtellerault;86;32 887
+Poitiers;86;90 590
+Limoges;87;135 140
+Épinal;88;33 454
+Auxerre;89;36 804
+Sens;89;26 688
+Belfort;90;49 926
+Athis-Mons;91;34 065
+Brétigny-sur-Orge;91;26 702
+Brunoy;91;26 520
+Corbeil-Essonnes;91;51 682
+Draveil;91;29 558
+Évry;91;55 425
+Grigny;91;29 118
+Massy;91;50 549
+Palaiseau;91;34 954
+Ris-Orangis;91;29 040
+Sainte-Geneviève-des-Bois;91;36 219
+Savigny-sur-Orge;91;36 677
+Les Ulis;91;25 031
+Vigneux-sur-Seine;91;31 488
+Viry-Châtillon;91;30 962
+Yerres;91;29 132
+Antony;92;62 989
+Asnières-sur-Seine;92;86 678
+Bagneux;92;39 977
+Bois-Colombes;92;28 607
+Boulogne-Billancourt;92;120 943
+Châtenay-Malabry;92;33 413
+Châtillon;92;37 132
+Clamart;92;53 099
+Clichy;92;60 746
+Colombes;92;86 050
+Courbevoie;92;82 351
+La Garenne-Colombes;92;29 503
+Gennevilliers;92;46 939
+Issy-les-Moulineaux;92;69 231
+Levallois-Perret;92;64 028
+Malakoff;92;30 286
+Meudon;92;46 014
+Montrouge;92;49 372
+Nanterre;92;96 321
+Neuilly-sur-Seine;92;61 501
+Le Plessis-Robinson;92;29 192
+Puteaux;92;44 941
+Rueil-Malmaison;92;79 783
+Saint-Cloud;92;30 797
+Suresnes;92;49 145
+Vanves;92;28 148
+Aubervilliers;93;86 533
+Aulnay-sous-Bois;93;85 214
+Bagnolet;93;36 047
+Le Blanc-Mesnil;93;56 346
+Bobigny;93;52 633
+Bondy;93;53 416
+Clichy-sous-Bois;93;29 978
+La Courneuve;93;42 712
+Drancy;93;70 883
+Épinay-sur-Seine;93;55 754
+Gagny;93;39 391
+Livry-Gargan;93;44 721
+Montfermeil;93;26 262
+Montreuil;93;109 235
+Neuilly-sur-Marne;93;34 859
+Noisy-le-Grand;93;67 086
+Noisy-le-Sec;93;43 693
+Pantin;93;55 585
+Pierrefitte-sur-Seine;93;29 728
+Romainville;93;26 640
+Rosny-sous-Bois;93;45 663
+Saint-Denis;93;112 309
+Saint-Ouen;93;49 949
+Sevran;93;50 888
+Stains;93;39 776
+Tremblay-en-France;93;35 866
+Villemomble;93;30 227
+Villepinte;93;36 809
+Alfortville;94;44 136
+Cachan;94;30 524
+Champigny-sur-Marne;94;77 883
+Charenton-le-Pont;94;30 793
+Choisy-le-Roi;94;44 781
+Créteil;94;90 052
+Fontenay-sous-Bois;94;53 968
+Fresnes;94;27 556
+L' Haÿ-les-Roses;94;31 416
+Ivry-sur-Seine;94;61 099
+Le Kremlin-Bicêtre;94;25 422
+Limeil-Brévannes;94;26 901
+Maisons-Alfort;94;55 816
+Nogent-sur-Marne;94;32 195
+Le Perreux-sur-Marne;94;34 017
+Saint-Maur-des-Fossés;94;75 833
+Sucy-en-Brie;94;26 575
+Thiais;94;29 295
+Villejuif;94;55 805
+Villeneuve-Saint-Georges;94;33 135
+Villiers-sur-Marne;94;29 407
+Vincennes;94;50 300
+Vitry-sur-Seine;94;93 317
+Argenteuil;95;112 064
+Bezons;95;29 216
+Cergy;95;64 451
+Eaubonne;95;25 514
+Ermont;95;29 400
+Franconville;95;36 349
+Garges-lès-Gonesse;95;42 821
+Gonesse;95;26 556
+Goussainville;95;31 167
+Herblay;95;29 614
+Pontoise;95;31 880
+Sannois;95;27 118
+Sarcelles;95;58 332
+Taverny;95;26 541
+Villiers-le-Bel;95;27 519
+Les Abymes;971;54 818
+Baie-Mahault;971;31 338
+Le Gosier;971;27 023
+Fort-de-France;972;82 030
+Le Lamentin;972;40 920
+Cayenne;973;60 947
+Kourou;973;26 726
+Matoury;973;32 768
+Remire-Montjoly;973;26 170
+Saint-Laurent-du-Maroni;973;44 130
+Le Port;974;35 141
+La Possession;974;33 337
+Saint-André;974;56 088
+Saint-Benoît;974;38 466
+Saint-Denis;974;149 337
+Saint-Joseph;974;38 167
+Saint-Leu;974;34 160
+Saint-Louis;974;53 832
+Saint-Paul;974;106 920
+Saint-Pierre;974;85 059
+Sainte-Marie;974;33 587
+Le Tampon;974;78 366
