@@ -44,5 +44,6 @@ public class TestVille {
             }
         }
         System.out.println("Liste des villes de plus de 100 000 hab. en majuscules : " + villes);
+
     }
 }

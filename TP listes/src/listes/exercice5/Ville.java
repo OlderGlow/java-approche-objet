@@ -1,6 +1,7 @@
 package listes.exercice5;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Ville {
     private String nom;
@@ -29,6 +30,14 @@ public class Ville {
 
     public String toString() {
         return nom + " - " + nbHabitants + " habitants";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ville ville = (Ville) o;
+        return nbHabitants == ville.nbHabitants && Objects.equals(nom, ville.nom);
     }
 
 }
