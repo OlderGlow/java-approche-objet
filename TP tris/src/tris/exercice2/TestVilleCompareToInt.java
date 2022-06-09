@@ -1,6 +1,7 @@
 package tris.exercice2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestVilleCompareToInt {
     public static void main(String[] args) {
@@ -15,15 +16,7 @@ public class TestVilleCompareToInt {
         villes.add(new Ville("Tarbes", 40600));
 
         // Trier par nombre d'habitants en utilisant la méthode compareTo de la classe Ville et afficher les résultats
-        for(int i= 0; i < villes.size(); i++) {
-            for(int j = 0; j < villes.size(); j++) {
-                if(villes.get(i).compareTo(villes.get(j)) > 0) {
-                    Ville temp = villes.get(i);
-                    villes.set(i, villes.get(j));
-                    villes.set(j, temp);
-                }
-            }
-        }
+        Collections.sort(villes);
         System.out.println(villes);
 
     }
