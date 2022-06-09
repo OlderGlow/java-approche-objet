@@ -3,6 +3,7 @@ package tris.exercice1;
 import tris.exercice1.Ville;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class VilleTest {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class VilleTest {
         villes.add(new Ville("Marseille", 850700));
         villes.add(new Ville("Tarbes", 40600));
 
-        // trier les villes par ordre alphabétique en utilisant la méthode compareTo
+        // trier les villes par ordre alphabétique en utilisant la méthode compareTo (Old Façon)
         for (int i = 0; i < villes.size() - 1; i++) {
             for (int j = i + 1; j < villes.size(); j++) {
                 if (villes.get(i).compareTo(villes.get(j)) > 0) {
@@ -26,6 +27,10 @@ public class VilleTest {
                 }
             }
         }
+        System.out.println("Liste des villes triées par ordre alphabétique : " + villes);
+
+        // New Façon
+        Collections.sort(villes);
         System.out.println("Liste des villes triées par ordre alphabétique : " + villes);
     }
 }
