@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class ManipulationFichier {
     public static void main(String[] args) throws IOException {
-        // Lire le contenu du fichier recensement.csv et afficher le nombre de lignes et de colonnes
         Path path = Paths.get("/Users/julienpicquet/IdeaProjects/approche-objet/TP Gestion des Fichiers/src/fichier/recensement.csv");
         Path newPath = Paths.get("/Users/julienpicquet/IdeaProjects/approche-objet/TP Gestion des Fichiers/src/fichier/recensement2.csv");
 
@@ -38,7 +37,6 @@ public class ManipulationFichier {
         }
         System.out.println("Le fichier " + newPath.getFileName() + " a été crée !");
         scanner.close();
-
 
     }
 }
