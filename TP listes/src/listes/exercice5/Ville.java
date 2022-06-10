@@ -6,10 +6,25 @@ import java.util.Objects;
 public class Ville {
     private String nom;
     private int nbHabitants;
+    private Continent continent;
 
     public Ville(String nom, int nbHabitants) {
         this.nom = nom;
         this.nbHabitants = nbHabitants;
+    }
+
+    public Ville(String nom, int nbHabitants, Continent continent) {
+        this.nom = nom;
+        this.nbHabitants = nbHabitants;
+        this.continent = continent;
+    }
+
+    public Continent getContinent() {
+        return continent;
+    }
+
+    public void setContinent(Continent continent) {
+        this.continent = continent;
     }
 
     public String getNom() {
@@ -29,7 +44,7 @@ public class Ville {
     }
 
     public String toString() {
-        return nom + " - " + nbHabitants + " habitants";
+        return nom + " - " + nbHabitants + " habitants - " + continent.getNom();
     }
 
     @Override
