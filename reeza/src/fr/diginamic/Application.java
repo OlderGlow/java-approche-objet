@@ -2,6 +2,7 @@ package fr.diginamic;
 
 import fr.diginamic.bll.ReservationService;
 import fr.diginamic.bo.Appartement;
+import fr.diginamic.bo.Logement;
 import fr.diginamic.exception.AppartementDejaReserveException;
 
 import java.util.Scanner;
@@ -41,10 +42,10 @@ public class Application {
     }
 
     private static void afficherMenu() {
-        System.out.println("1 - Réserver un appartement pour X personnes");
-        System.out.println("2 - Libérer un appartement");
-        System.out.println("3 - Lister les appartements disponibles");
-        System.out.println("4 - Lister les appartements réservés");
+        System.out.println("1 - Réserver un logement pour X personnes");
+        System.out.println("2 - Libérer un logement");
+        System.out.println("3 - Lister les logements disponibles");
+        System.out.println("4 - Lister les logements réservés");
         System.out.println("99 - Quitter");
     }
 
@@ -54,14 +55,14 @@ public class Application {
 
     private static void reserverAppartement() throws AppartementDejaReserveException {
         listerAppartementsDisponibles();
-        System.out.println("Quel appartement souhaitez-vous réserver ?");
+        System.out.println("Quel logement souhaitez-vous réserver ?");
         int idAppartement = scanner.nextInt();
-        Appartement appartement = rechercherAppartement(idAppartement);
+        Logement logement = rechercherLogement(idAppartement);
         System.out.println("Combien de personnes souhaitez-vous ?");
         int nbPersonnes = scanner.nextInt();
-        assert appartement != null;
-        if (nbPersonnes <= appartement.getNbMaxLocataires()) {
-            ReservationService.reserverAppartement(appartement);
+        assert logement != null;
+        if (nbPersonnes <= logement.getNbMaxLocataires()) {
+            ReservationService.reserverLogement(logement);
         } else {
             System.err.println("Il n'y a pas assez de place pour cette réservation");
         }
@@ -71,7 +72,7 @@ public class Application {
         listerAppartementsReserves();
         System.out.println("Quel appartement souhaitez-vous libérer ?");
         int idAppartement = scanner.nextInt();
-        Appartement appartement = rechercherAppartement(idAppartement);
-        ReservationService.libererAppartement(appartement);
+        Logement logement = rechercherLogement(idAppartement);
+        ReservationService.libererLogement(logement);
     }
 }

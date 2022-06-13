@@ -1,57 +1,56 @@
 package fr.diginamic.bll;
 
-import fr.diginamic.bo.Appartement;
-import fr.diginamic.dao.AppartementDAO;
+import fr.diginamic.bo.Logement;
+import fr.diginamic.dao.LogementDAO;
 import fr.diginamic.exception.AppartementDejaReserveException;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class ReservationService {
-    static AppartementDAO appartementDAO = new AppartementDAO();
-    private static List<Appartement> appartements = appartementDAO.getAppartements();
+    static LogementDAO logementDAO = new LogementDAO();
+    private static final List<Logement> logements = logementDAO.getAppartements();
 
     public static void listerAppartementsDisponibles() {
-        for (Appartement appartement : appartements) {
-            if (!appartement.isEstReserve()) {
-                System.out.println(appartement);
+        for (Logement logement : logements) {
+            if (!logement.isEstReserve()) {
+                System.out.println(logement);
             }
         }
     }
 
     public static void listerAppartementsReserves() {
-        for (Appartement appartement : appartements) {
-            if (appartement.isEstReserve()) {
-                System.out.println(appartement);
+        for (Logement logement : logements) {
+            if (logement.isEstReserve()) {
+                System.out.println(logement);
             }
         }
     }
 
-    public static void reserverAppartement(Appartement appartement) throws AppartementDejaReserveException {
-        if (appartement != null) {
-            if(appartement.isEstReserve()) {
+    public static void reserverLogement(Logement logement) throws AppartementDejaReserveException {
+        if (logement != null) {
+            if (logement.isEstReserve()) {
                 throw new AppartementDejaReserveException();
             }
-            appartement.setEstReserve(true);
-            System.out.println("Appartement réservé");
+            logement.setEstReserve(true);
+            System.out.println("Logement réservé");
         } else {
-            System.err.println("Appartement inconnu");
+            System.err.println("Logement inconnu");
         }
     }
 
-    public static void libererAppartement(Appartement appartement) {
-        if (appartement != null && appartement.isEstReserve()) {
-            appartement.setEstReserve(false);
-            System.out.println("Appartement libéré");
+    public static void libererLogement(Logement logement) {
+        if (logement != null && logement.isEstReserve()) {
+            logement.setEstReserve(false);
+            System.out.println("Logement libéré");
         } else {
-            System.err.println("Appartement inconnu ou déjà réservé !");
+            System.err.println("Logement inconnu ou déjà réservé !");
         }
     }
 
-    public static Appartement rechercherAppartement(int id) {
-        for (Appartement appartement : appartements) {
-            if (appartement.getId() == id) {
-                return appartement;
+    public static Logement rechercherLogement(int id) {
+        for (Logement logement : logements) {
+            if (logement.getId() == id) {
+                return logement;
             }
         }
         return null;
