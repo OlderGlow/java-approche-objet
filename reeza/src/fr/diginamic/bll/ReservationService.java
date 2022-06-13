@@ -27,38 +27,24 @@ public class ReservationService {
         }
     }
 
-    public static void reserverAppartement(Scanner scanner) throws AppartementDejaReserveException {
-        listerAppartementsDisponibles();
-        System.out.println("Quel appartement souhaitez-vous réserver ?");
-        int idAppartement = scanner.nextInt();
-        Appartement appartement = rechercherAppartement(idAppartement);
+    public static void reserverAppartement(Appartement appartement) throws AppartementDejaReserveException {
         if (appartement != null) {
             if(appartement.isEstReserve()) {
                 throw new AppartementDejaReserveException();
             }
-            System.out.println("Combien de personnes souhaitez-vous ?");
-            int nbPersonnes = scanner.nextInt();
-            if (nbPersonnes <= appartement.getNbMaxLocataires()) {
-                appartement.setEstReserve(true);
-                System.out.println("Appartement réservé");
-            } else {
-                System.err.println("Il n'y a pas assez de place pour cette réservation");
-            }
+            appartement.setEstReserve(true);
+            System.out.println("Appartement réservé");
         } else {
             System.err.println("Appartement inconnu");
         }
     }
 
-    public static void libererAppartement(Scanner scanner) {
-        listerAppartementsReserves();
-        System.out.println("Quel appartement souhaitez-vous libérer ?");
-        int idAppartement = scanner.nextInt();
-        Appartement appartement = rechercherAppartement(idAppartement);
-        if (appartement != null) {
+    public static void libererAppartement(Appartement appartement) {
+        if (appartement != null && appartement.isEstReserve()) {
             appartement.setEstReserve(false);
             System.out.println("Appartement libéré");
         } else {
-            System.err.println("Appartement inconnu");
+            System.err.println("Appartement inconnu ou déjà réservé !");
         }
     }
 
