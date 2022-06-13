@@ -1,16 +1,15 @@
-package fr.diginamic.services;
+package fr.diginamic.bll;
 
-import fr.diginamic.entite.Adresse;
-import fr.diginamic.entite.Appartement;
-import fr.diginamic.entite.Reservation;
+import fr.diginamic.bo.Appartement;
+import fr.diginamic.dao.AppartementDAO;
 import fr.diginamic.exception.AppartementDejaReserveException;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class ReservationService {
-    static Reservation reservation = new Reservation();
-    private static List<Appartement> appartements = reservation.getAppartements();
+    static AppartementDAO appartementDAO = new AppartementDAO();
+    private static List<Appartement> appartements = appartementDAO.getAppartements();
 
     public static void listerAppartementsDisponibles() {
         for (Appartement appartement : appartements) {
@@ -43,7 +42,7 @@ public class ReservationService {
                 appartement.setEstReserve(true);
                 System.out.println("Appartement réservé");
             } else {
-                System.out.println("Il n'y a pas assez de place pour cette réservation");
+                System.err.println("Il n'y a pas assez de place pour cette réservation");
             }
         } else {
             System.err.println("Appartement inconnu");

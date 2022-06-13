@@ -1,4 +1,4 @@
-package fr.diginamic.entite;
+package fr.diginamic.bo;
 
 public class Adresse {
     private String rue;

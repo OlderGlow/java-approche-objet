@@ -1,16 +1,14 @@
 package fr.diginamic;
 
-import fr.diginamic.entite.Adresse;
-import fr.diginamic.entite.Appartement;
-import fr.diginamic.entite.Reservation;
+import fr.diginamic.dao.AppartementDAO;
 import fr.diginamic.exception.AppartementDejaReserveException;
-import fr.diginamic.services.ReservationService;
+import fr.diginamic.bll.ReservationService;
 
 import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) throws AppartementDejaReserveException {
-        Reservation reservation = new Reservation();
+        AppartementDAO appartementDAO = new AppartementDAO();
         Scanner scanner = new Scanner(System.in);
         int choix = 0;
         do {
