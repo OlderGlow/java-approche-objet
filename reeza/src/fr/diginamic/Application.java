@@ -3,7 +3,7 @@ package fr.diginamic;
 import fr.diginamic.bll.ReservationService;
 import fr.diginamic.bo.Appartement;
 import fr.diginamic.bo.Logement;
-import fr.diginamic.exception.AppartementDejaReserveException;
+import fr.diginamic.exception.LogementDejaReserveException;
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class Application {
                 case 1 -> {
                     try {
                         reserverAppartement();
-                    } catch (AppartementDejaReserveException e) {
+                    } catch (LogementDejaReserveException e) {
                         System.err.println(e.getMessage());
                     }
                 }
@@ -53,7 +53,7 @@ public class Application {
         return appartement.isEstReserve();
     }
 
-    private static void reserverAppartement() throws AppartementDejaReserveException {
+    private static void reserverAppartement() throws LogementDejaReserveException {
         listerAppartementsDisponibles();
         System.out.println("Quel logement souhaitez-vous réserver ?");
         int idAppartement = scanner.nextInt();

@@ -2,7 +2,7 @@ package fr.diginamic.bll;
 
 import fr.diginamic.bo.Logement;
 import fr.diginamic.dao.LogementDAO;
-import fr.diginamic.exception.AppartementDejaReserveException;
+import fr.diginamic.exception.LogementDejaReserveException;
 
 import java.util.List;
 
@@ -26,10 +26,10 @@ public class ReservationService {
         }
     }
 
-    public static void reserverLogement(Logement logement) throws AppartementDejaReserveException {
+    public static void reserverLogement(Logement logement) throws LogementDejaReserveException {
         if (logement != null) {
             if (logement.isEstReserve()) {
-                throw new AppartementDejaReserveException();
+                throw new LogementDejaReserveException();
             }
             logement.setEstReserve(true);
             System.out.println("Logement réservé");
