@@ -1,3 +1,5 @@
 /.idea/
 /approche-objet.iml
 /out/
+*.iml
+/target/
