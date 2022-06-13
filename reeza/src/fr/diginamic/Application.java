@@ -1,14 +1,12 @@
 package fr.diginamic;
 
-import fr.diginamic.dao.AppartementDAO;
-import fr.diginamic.exception.AppartementDejaReserveException;
 import fr.diginamic.bll.ReservationService;
+import fr.diginamic.exception.AppartementDejaReserveException;
 
 import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) throws AppartementDejaReserveException {
-        AppartementDAO appartementDAO = new AppartementDAO();
         Scanner scanner = new Scanner(System.in);
         int choix = 0;
         do {
@@ -37,11 +35,12 @@ public class Application {
         } while (choix != 99);
         scanner.close();
     }
-        private static void afficherMenu() {
-            System.out.println("1 - Réserver un appartement pour X personnes");
-            System.out.println("2 - Libérer un appartement");
-            System.out.println("3 - Lister les appartements disponibles");
-            System.out.println("4 - Lister les appartements réservés");
-            System.out.println("99 - Quitter");
-        }
+
+    private static void afficherMenu() {
+        System.out.println("1 - Réserver un appartement pour X personnes");
+        System.out.println("2 - Libérer un appartement");
+        System.out.println("3 - Lister les appartements disponibles");
+        System.out.println("4 - Lister les appartements réservés");
+        System.out.println("99 - Quitter");
     }
+}
